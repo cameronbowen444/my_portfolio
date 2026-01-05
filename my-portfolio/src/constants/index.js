@@ -255,50 +255,6 @@ const projects = [
         source_code_link2: "https://nicollebustos.com/",
     },
     {
-        name: "NextJs Ecommerce Store",
-        description:
-            "NextJs & typescript educational project",
-        tags: [
-            {
-                name: "typescript",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "nextjs",
-                color: "green-text-gradient",
-            },
-            {
-                name: "sanity",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: nextstore,
-        source_code_link: "https://github.com/cameronbowen444/next_ecommerce_store",
-        source_code_link2: "https://next-ecommerce-store-bce3-b43sog551-cameronbowen444s-projects.vercel.app/",
-    },
-    {
-        name: "Restuarant site",
-        description:
-            "Educational Project w/ redux.",
-        tags: [
-            {
-                name: "reactjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "redux",
-                color: "green-text-gradient",
-            },
-            {
-                name: "css modules",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: food,
-        source_code_link: "https://github.com/cameronbowen444/restaurant_app",
-        source_code_link2: "https://gregarious-starship-fd1238.netlify.app",
-    },
-    {
         name: "My Portfolio",
         description:
             "Portfolio react project",
@@ -385,6 +341,50 @@ const projects = [
         image: construction,
         source_code_link: "https://github.com/cameronbowen444/django-ecommerce",
         source_code_link2: "https://construction-site-flame.vercel.app/",
+    },
+    {
+        name: "NextJs Ecommerce Store",
+        description:
+            "NextJs & typescript educational project",
+        tags: [
+            {
+                name: "typescript",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "nextjs",
+                color: "green-text-gradient",
+            },
+            {
+                name: "sanity",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: nextstore,
+        source_code_link: "https://github.com/cameronbowen444/next_ecommerce_store",
+        source_code_link2: "https://next-ecommerce-store-bce3-b43sog551-cameronbowen444s-projects.vercel.app/",
+    },
+    {
+        name: "Restuarant site",
+        description:
+            "Educational Project w/ redux.",
+        tags: [
+            {
+                name: "reactjs",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "redux",
+                color: "green-text-gradient",
+            },
+            {
+                name: "css modules",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: food,
+        source_code_link: "https://github.com/cameronbowen444/restaurant_app",
+        source_code_link2: "https://gregarious-starship-fd1238.netlify.app",
     },
 ];
 
