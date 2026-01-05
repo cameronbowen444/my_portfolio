@@ -1,53 +1,28 @@
-import React, { useState, useRef } from 'react';
+import React, {useState} from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
+import { useForm } from 'react-hook-form'
 
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { contact } from '../assets';
 
-// TMQ1IBMyyD-_bVfM3
-// template_1vm6yfr
-// service_pnvfs2v
+
 
 const Contact = () => {
-  const formRef = useRef();
+  const [loading, setLoading] = useState("")
+  const {
+    register,
+    trigger,
+    formState: {errors}
+  } = useForm();
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    
-    emailjs.send(
-      'service_pnvfs2v', 
-      'template_1vm6yfr',
-      {
-        from_name: name,
-        to_name: 'Cameron',
-        from_email: email,
-        to_email: 'cameronbowen555@gmail.com',
-        message: message,
-      },
-      'TMQ1IBMyyD-_bVfM3'
-    )
-      .then(() => {
-        setLoading(false);
-        alert('Thank you. I will get back to you as soon as possible.');
-        setName("")
-        setEmail("")
-        setMessage("")
-      }, (error) => {
-        setLoading(false);
-        console(error);
-        alert('Something went wrong.')
-      })
-  };
+  const onSubmit = async (e) => {
+    const isValid = await trigger();
+    if (!isValid) {
+      e.preventDefault();
+    }
+  }
 
   return (
     <div className='lg:flex-row flex-col-reverse flex justify-between gap-0 overflow-hidden'>
@@ -58,54 +33,82 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
         <form 
-          ref={formRef}
-          onSubmit={handleSubmit}
+          onSubmit={onSubmit}
+          action='https://formsubmit.co/1e71deedbcbb120dc908c8f9eeef861b'
+          method="POST"
           className='mt-12 flex flex-col gap-8'
         >
           {/* NAME */}
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white font-medium mb-4'>Your Name: </span>
             <input 
               type="text" 
-              name='name' 
-              value={name} 
-              onChange={(e) => setName(e.target.value)} 
-              placeholder="What's your name?"
+              placeholder='Enter your full name'
+              {
+                ...register("name", {
+                  required: true,
+                  maxLength: 100,
+                })
+              }
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-              required
-              minLength={3}
             />
           </label>
+          {
+            errors.name && (
+              <p className='text-[red]'>
+                {errors.name.type === 'required' && "This field is required."}
+                {errors.name.type === 'maxLength' && "Max length is 100 characters."}
+              </p>
+            )
+          }
 
           {/* EMAIL */}
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Email</span>
             <input 
               type="email" 
-              name='email' 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)} 
-              placeholder="What's your email?"
+              placeholder='Enter your email'
+              {
+                ...register("email", {
+                  required: true,
+                  pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                })
+              }
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-              required
-              pattern='/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/'
             />
           </label>
-
+          {
+            errors.email && (
+              <p className=' text-[red]'>
+                {errors.email.type === 'required' && "This field is required."}
+                {errors.email.type === 'pattern' && "Invalid email address."}
+              </p>
+            )
+          }
           {/* MESSAGE */}
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Message</span>
             <textarea 
               rows="7"
               type="text" 
-              name='message' 
-              value={message} 
-              onChange={(e) => setMessage(e.target.value)} 
-              placeholder="What's your message?"
+              placeholder='Enter your message'
+              {
+                ...register("message", {
+                  required: true,
+                  maxLength: 2000,
+                })
+              }
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-              required
             />
           </label>
+          {
+            errors.message && (
+              <p className='text-[red]'>
+                {errors.message.type === 'required' && "This field is required."}
+                {errors.message.type === 'maxLength' && "Max length is 2000 characters."}
+              </p>
+            )
+          }
           <button
             type='submit'
             className='bg-tertiary py-3 px-8 outline-none w-fit text-white shadow-md shadow-primary rounded-xl'
@@ -116,7 +119,7 @@ const Contact = () => {
       </motion.div> 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='lg:relative lg:top-[200px] '
+        className={` lg:inline-block relative top-[200px] hidden`}
       >
         
         <img src={contact} alt="portfolio" />

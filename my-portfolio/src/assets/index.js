@@ -4,39 +4,35 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import link from "./link.png"
 import menu from "./menu.svg";
 import close from "./close.svg";
 import portfolio from './portfolio_img.png'
 import contact from './contact.png'
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import threejs from "./tech/threejs.svg";
-import bootstrap from './tech/bootstrap.png'
 import next from './tech/next.png'
-import sass from './tech/sass.png'
 import django from './tech/django.png'
 import flask from './tech/flask.png'
-
+import typescript from './tech/typescript.png'
+import mysql from './tech/mysql.png'
 import python from './tech/python.png'
 
 import nicolle from "./nicolle.png";
-import kim from "./kim-bowen.png";
-import shirt from "./shirt-app.png";
+import kim from "./kim.png";
+import nextstore from './nextstore.png'
 import food from "./food-app.png";
-import ecommerce from "./ecommerce.png";
 import project from "./portfolio.png";
-import product from './product.png';
-import store from './store.png';
-import portrait1 from './nicolle.jpeg'
+import portrait1 from './nicolle.jpeg';
+import mike from './mike.png';
+import frank from './frank.png';
+import photographer from './photographer.png'
+import construction from './construction.png';
+import realestate from './realestate.png';
 
 export {
   logo,
@@ -45,35 +41,32 @@ export {
   mobile,
   web,
   github,
+  link,
   menu,
   close,
   css,
-  docker,
-  figma,
-  git,
   html,
   javascript,
   mongodb,
   nodejs,
   reactjs,
-  redux,
-  tailwind,
-  threejs,
+  typescript,
+  mysql,
   nicolle,
   kim,
-  shirt,
   food,
-  ecommerce,
   portfolio,
   project,
-  bootstrap,
   next,
-  sass,
   flask,
   django,
   python,
-  product,
-  store,
   portrait1,
-  contact
+  contact,
+  nextstore,
+  mike,
+  frank,
+  photographer,
+  construction,
+  realestate
 };

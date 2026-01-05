@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.11.0",
     "@react-three/drei": "^9.84.2",
     "@react-three/fiber": "^8.14.2",
     "@types/three": "^0.156.0",
@@ -18,8 +17,10 @@
     "maath": "^0.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.47.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.16.0",
+    "react-router-hash-link": "^2.4.3",
     "react-tilt": "^1.0.2",
     "react-tsparticles": "^2.12.2",
     "react-vertical-timeline-component": "^3.6.0",

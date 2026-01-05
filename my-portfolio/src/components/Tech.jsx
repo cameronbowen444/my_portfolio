@@ -16,6 +16,9 @@ const Tech = () => {
         <h2 className={styles.sectionHeadText}>
           Technologies.
         </h2>
+        <p className='my-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+          I have only listed my top skills, if you would like to see all skills, please view my resume.
+        </p>
       </motion.div>
       <div className='flex flex-row flex-wrap justify-center gap-2'>
         {

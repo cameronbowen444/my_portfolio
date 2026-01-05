@@ -4,36 +4,38 @@ import {
     creator,
     web,
     javascript,
+    typescript,
     html,
     css,
     reactjs,
-    redux,
-    tailwind,
     nodejs,
     mongodb,
-    git,
     nicolle,
     kim,
-    shirt,
     food,
-    ecommerce,
+    nextstore,
     project,
-    bootstrap,
-    sass,
     next,
     python,
     flask,
     django,
-    threejs,
-    product,
-    store,
-    portrait1
+    mysql,
+    portrait1,
+    mike, 
+    frank,
+    photographer,
+    construction,
+    realestate
 } from "../assets";
 
 export const navLinks = [
     {
         id: "about",
         title: "About",
+    },
+    {
+        id: "projects",
+        title: "Projects",
     },
     {
         id: "work",
@@ -47,11 +49,11 @@ export const navLinks = [
 
 const services = [
     {
-        title: "Web Developer",
+        title: "React Developer",
         icon: web,
     },
     {
-        title: "React Native Developer",
+        title: "NextJS Developer",
         icon: mobile,
     },
     {
@@ -74,32 +76,20 @@ const technologies = [
         icon: css,
     },
     {
-        name: "SASS",
-        icon: sass,
-    },
-    {
         name: "JavaScript",
         icon: javascript,
+    },
+    {
+        name: "TypeScript",
+        icon: typescript,
     },
     {
         name: "React JS",
         icon: reactjs,
     },
     {
-        name: "Redux",
-        icon: redux,
-    },
-    {
         name: "Next JS",
         icon: next, 
-    },
-    {
-        name: "Tailwind",
-        icon: tailwind,
-    },
-    {
-        name: "Bootstrap",
-        icon: bootstrap,
     },
     {
         name: "Node JS",
@@ -111,7 +101,7 @@ const technologies = [
     },
     {
         name: "MySQL",
-        icon: nodejs, // NEED
+        icon: mysql,
     },
     {
         name: "Python",
@@ -119,28 +109,12 @@ const technologies = [
     },
     {
         name: "Flask",
-        icon: flask, // NEED
+        icon: flask, 
     },
     {
         name: "Django",
         icon: django
     },
-    {
-        name: "ThreeJs",
-        icon: threejs,
-    },
-    {
-        name: "Git",
-        icon: git,
-    },
-    // {
-    //     name: "Figma",
-    //     icon: figma,
-    // },
-    // {
-    //     name: "Docker",
-    //     icon: docker,
-    // },
 ];
 
 const experiences = [
@@ -150,10 +124,10 @@ const experiences = [
         iconBg: "#383E56",
         date: "Oct 2023 - Current",
         points: [
-            "Developing and maintaining a web application using React.js and other related technologies as well as completely designing everything from scratch.",
-            "Collaborating with cross-functional teams including designers, marketing professionals to create high-quality designs.",
-            "Implementing responsive design, ensuring cross-browser compatibility, speed and security.",
-            "No code to show yet but should be ready to include in my portfolio very soon.",
+            "Designed, developed, and maintained modern web applications using React and related frontend technologies.",
+            "Led projects end-to-end, handling UI/UX design, development, and deployment from scratch.",
+            "Collaborated with designers and marketing professionals to deliver high-quality, brand-focused interfaces.",
+            "Implemented responsive design, cross-browser compatibility, performance optimizations, and security best practices.",
         ],
     },
     {
@@ -162,10 +136,10 @@ const experiences = [
         iconBg: "#383E56",
         date: "Sep 2021 - Sep 2022",
         points: [
-            "Developing and maintaining a web application using react.js, css animaitons, api for form interaction with Gmail and ",
-            "Based on youtube open source video only for layout purposes and learning responive animations.",
-            "Probably my best work for freelance since I took the layout from the video and completly redesigned it with including aditional features of my own.",
-            "Also used photoshop to design the form background since I wanted to create an impressive design.",
+            "Built and maintained a responsive portfolio website using React, CSS animations, Bootstrap, and FormSubmit API for email form handling.",
+            "Designed the layout and interactions by analyzing industry portfolio examples and applying custom responsive animations.",
+            "Fully redesigned the project with additional custom features, making it one of my strongest freelance projects.",
+            "Used Photoshop to design custom visual assets and backgrounds to enhance the site’s visual impact.",
         ],
     },
     {
@@ -174,10 +148,10 @@ const experiences = [
         iconBg: "#383E56",
         date: "Sep 2023 - Sep 2023",
         points: [
-            "Helped my girlfriend develop a portfolio website with React, tailwind, framer motion and form API that works with Gmail.",
-            "Based on Ed Roh youtube video, wanting to learn more about using different apis for forms and design techniques with tailwind.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Understood what it takes to build a website for someone and gain freelance experience.",
+            "Developed a modern portfolio website using React, Tailwind CSS, Framer Motion, and a form API integrated with Gmail.",
+            "Implemented responsive layouts and motion effects to create a polished, professional user experience.",
+            "Delivered the project on a tight timeline to support a job application deadline.",
+            "Gained hands-on freelance experience by delivering a real, production-ready website for a client.",
         ],
     },
     {
@@ -186,10 +160,10 @@ const experiences = [
         iconBg: "#383E56",
         date: "April 2023 - May 2023",
         points: [
-            "Helped put together all of the components from an already built design. Did not do much coding but got to see what it's like to work with people in a tech like workspace.",
-            "Inserted a few blocks of code to make the website more unique to meet the needs of my employer.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Implemented automated services for renting a ride and emails from a database that was already pre-built and just needed a few connections",
+            "Integrated and assembled pre-designed components into a functional, responsive website.",
+            "Added custom code enhancements to tailor the site to business requirements.",
+            "Ensured responsive design and cross-browser compatibility.",
+            "Implemented automated services for ride bookings and email notifications using an existing database and backend integrations.",
         ],
     },
     {
@@ -198,11 +172,11 @@ const experiences = [
         iconBg: "#383E56",
         date: "Feb 2021 - Dec 2021",
         points: [
-            "Initially, assisted the original tech manager put together the website and design html email design.",
-            "Added more automated services to increase conversion rates with services like zapier, click funnels, mailchimp, etc...",
-            "Handled database and organization of clients based on cold, warm, or hot categories while keeping them updated with properties.",
-            "Handled all of the forms and paperwork to close deals as a transaction coordinator for the team with Docusign.",
-            "Reason for leaving was to begin my journey as a software developer due to the fact that I loved handling the digital aspects of the business.",
+            "Assisted in building and maintaining the company website and designing HTML email templates.",
+            "Implemented marketing automation tools including Zapier, ClickFunnels, and Mailchimp to improve lead conversion rates.",
+            "Managed client data organization and workflows based on lead status (cold, warm, hot).",
+            "Coordinated transaction paperwork and digital documentation using DocuSign.",
+            "Transitioned roles to pursue a career in software development after discovering a strong interest in the technical side of the business.",
         ],
     },
 
@@ -211,7 +185,7 @@ const experiences = [
 const testimonials = [
     {
         testimonial:
-            "Cameron was able to help me when I needed something quickly, he found a solution and made it happen ",
+            "Cameron delivered a modern, responsive website that exceeded our expectations.",
         name: "Nicolle Bustos",
         designation: "Marketing",
         company: "CSUN",
@@ -219,19 +193,19 @@ const testimonials = [
     },
     {
         testimonial:
-            "I've never met a person in the computer industry so good with people and solving problems ",
+            "Clear communication, strong frontend skills, and a polished final product.",
         name: "Mike Brown",
         designation: "CEO",
         company: "Better Brands",
-        image: "https://randomuser.me/api/portraits/men/5.jpg",
+        image: mike,
     },
     {
         testimonial:
-            "Even though we felt no one could help, Cameron helped find a solution.",
+            "Fast, professional, and detail-oriented. The entire process was seamless.",
         name: "Frank Bustos",
         designation: "CEO",
         company: "Diamond Wings",
-        image: "https://randomuser.me/api/portraits/women/6.jpg",
+        image: frank,
     },
 ];
 
@@ -239,14 +213,14 @@ const projects = [
     {
         name: "Kim Bowen",
         description:
-            "Completley redesigned the structure and code from an open source project and tutorial, too really learn more about css animations with responsive behavior and have a boilerplate to work off. Hosted and secure with Hostinger.",
+            "Freelance project with react.",
         tags: [
             {
                 name: "reactjs",
                 color: "blue-text-gradient",
             },
             {
-                name: "rest_api",
+                name: "freelance",
                 color: "green-text-gradient",
             },
             {
@@ -255,19 +229,20 @@ const projects = [
             },
         ],
         image: kim,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/cameronbowen444/kim_bowen",
+        source_code_link2: "https://kim-bowen.com/",
     },
     {
         name: "Nicolle Bustos",
         description:
-            "Used an open source project to help build my girlfriend a portfolio. Learned more about different techniques used designing with tailwind, motion divs and apis used for forms. Also getting used to inline styling. Hosted and secure with Hostinger.",
+            "Freelance project with react",
         tags: [
             {
                 name: "reactjs",
                 color: "blue-text-gradient",
             },
             {
-                name: "rest_api",
+                name: "freelance",
                 color: "green-text-gradient",
             },
             {
@@ -276,58 +251,35 @@ const projects = [
             },
         ],
         image: nicolle,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/cameronbowen444/nicolle_bustos",
+        source_code_link2: "https://nicollebustos.com/",
     },
     {
-        name: "Shirt Customizer w/ ChatGPT",
+        name: "NextJs Ecommerce Store",
         description:
-            "Used an open source project to help build my girlfriend a portfolio. Learned more about different techniques used designing with tailwind, motion divs and apis used for forms. Also getting used to inline styling. Hosted and secure with Hostinger.",
+            "NextJs & typescript educational project",
         tags: [
             {
-                name: "reactjs",
+                name: "typescript",
                 color: "blue-text-gradient",
             },
             {
-                name: "vite",
+                name: "nextjs",
                 color: "green-text-gradient",
             },
             {
-                name: "openai",
+                name: "sanity",
                 color: "pink-text-gradient",
             },
         ],
-        image: shirt,
-        source_code_link: "https://github.com/",
+        image: nextstore,
+        source_code_link: "https://github.com/cameronbowen444/next_ecommerce_store",
+        source_code_link2: "https://next-ecommerce-store-bce3-b43sog551-cameronbowen444s-projects.vercel.app/",
     },
     {
-        name: "Ecommerce Store w/ Strapi and Redux ",
+        name: "Restuarant site",
         description:
-            "Used an open source project to help build my girlfriend a portfolio. Learned more about different techniques used designing with tailwind, motion divs and apis used for forms. Also getting used to inline styling. Hosted and secure with Hostinger.",
-        tags: [
-            {
-                name: "reactjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "strapi",
-                color: "green-text-gradient",
-            },
-            {
-                name: "redux",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "postressql",
-                color: "blue-text-gradient",
-            },
-        ],
-        image: ecommerce,
-        source_code_link: "https://github.com/",
-    },
-    {
-        name: "Restuarant Delivery Site w/ Redux",
-        description:
-            "Used an open source project to help build my girlfriend a portfolio. Learned more about different techniques used designing with tailwind, motion divs and apis used for forms. Also getting used to inline styling. Hosted and secure with Hostinger.",
+            "Educational Project w/ redux.",
         tags: [
             {
                 name: "reactjs",
@@ -338,75 +290,101 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "css modules",
                 color: "pink-text-gradient",
             },
         ],
         image: food,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/cameronbowen444/restaurant_app",
+        source_code_link2: "https://gregarious-starship-fd1238.netlify.app",
     },
     {
         name: "My Portfolio",
         description:
-            "Used an open source project to help build my girlfriend a portfolio. Learned more about different techniques used designing with tailwind, motion divs and apis used for forms. Also getting used to inline styling. Hosted and secure with Hostinger.",
+            "Portfolio react project",
         tags: [
             {
-                name: "nextjs",
+                name: "reactjs",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "threejs",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "tailwind",
                 color: "pink-text-gradient",
             },
         ],
         image: project,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/cameronbowen444/my_portfolio",
+        source_code_link2: "https://cameron-bowen.com/",
     },
     {
-        name: "Product Manager",
+        name: "Real Estate Website",
         description:
-            "Used an open source project to help build my girlfriend a portfolio. Learned more about different techniques used designing with tailwind, motion divs and apis used for forms. Also getting used to inline styling. Hosted and secure with Hostinger.",
+            "Educational Project with react",
         tags: [
             {
-                name: "nextjs",
+                name: "reactjs",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "single-page",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "vercel",
                 color: "pink-text-gradient",
             },
         ],
-        image: product,
-        source_code_link: "https://github.com/",
+        image: realestate,
+        source_code_link: "https://github.com/cameronbowen444/ecommerce-store",
+        source_code_link2: "https://real-estate-projects-sigma.vercel.app/",
     },
     {
-        name: "Django Ecommerce Store",
+        name: "Photographer Site",
         description:
-            "Used an open source project to help build my girlfriend a portfolio. Learned more about different techniques used designing with tailwind, motion divs and apis used for forms. Also getting used to inline styling. Hosted and secure with Hostinger.",
+            "Educational practice react project.",
         tags: [
             {
-                name: "nextjs",
+                name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "framer-motion",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "react-router",
                 color: "pink-text-gradient",
             },
         ],
-        image: store,
-        source_code_link: "https://github.com/",
+        image: photographer,
+        source_code_link: "https://github.com/cameronbowen444/product_manager",
+        source_code_link2: "https://photographer-projects.vercel.app/",
+    },
+    {
+        name: "Construction Site",
+        description:
+            "NextJs SPA educational project.",
+        tags: [
+            {
+                name: "NextJs",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "app-router",
+                color: "green-text-gradient",
+            },
+            {
+                name: "framer-motion",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: construction,
+        source_code_link: "https://github.com/cameronbowen444/django-ecommerce",
+        source_code_link2: "https://construction-site-flame.vercel.app/",
     },
 ];
 

@@ -3,12 +3,12 @@ import { Tilt } from 'react-tilt';
 import {motion} from 'framer-motion';
 
 import { styles } from '../styles';
-import { github } from '../assets';
+import { github, link } from '../assets';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, source_code_link2 }) => {
   return(
     <motion.div
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
@@ -30,7 +30,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           <div className=' absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-1'
             >
               <img 
                 src={github} 
@@ -39,7 +39,19 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
               />
               {/* MAKE THIS A BUTTON LINK TO SITE */}
             </div>
-            
+            { source_code_link2 === "" ? "" : (
+              <div
+              onClick={() => window.open(source_code_link2, "_blank")}
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            >
+              <img 
+                src={link} 
+                alt="github" 
+                className='w-1/2 h-1/2 object-contain'
+              />
+              {/* MAKE THIS A BUTTON LINK TO SITE */}
+            </div>
+            )}
           </div>
         </div>
         <div className='mt-5'>
@@ -78,7 +90,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Below, I have listed the projects that have had the biggest impact on my skills and developement to specialze as a software developer. A lot of the skills that I have developed came from watching a lot of tutorials, seeing how others code, working with other developers, and receiving advice from CSUN students studying computer science.
+          Below are my favorite project.
         </motion.div>
       </div>
       
@@ -97,4 +109,4 @@ const Works = () => {
   )
 }
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");

@@ -40,7 +40,7 @@ const About = () => {
     <>
       <motion.div variants={textVariant}>
         <p className={styles.sectionSubText}>
-          Introduction - Frontend Dev Story
+          Introduction - Brief Story
         </p>
         <h2 className={styles.sectionHeadText}>
           About Me
@@ -54,8 +54,8 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text=[15px] max-w-3xl leading-[30px]"
         >
-          For The last 2 years I have given my life to software development. I left my career in real estate from working with a top selling real estate team to become a software developer. Starting at a bootcamp "Coding Bojo" learning full stack developement for Java, Python and MERN. I graduated and started building my own projects using the resourse from coding dojo, google and stack overflow. Recentely, I found myself deciding to specialize, relearn and perfect front end developement through <strong>Codecademy</strong>. I now currently use youtube as an aditional source to learn through open source projects where I feel I've been able to enhance my frontend skills. 
-          {/* With the last 2 and a half years of my life learning full stack web development I'm excited to begin my journey and passion specializing as a frontend developer. I find myself deep in javascript. Even though I have learned all about the frontend, backend, database and interacting with all of these main components, I spend 75% of my time in love with frontend development. */}
+          For the past four years, I’ve devoted myself to web development and developed a strong passion for building modern, high-quality applications. I currently focus on frontend technologies, with a solid background in full-stack development gained through Coding Dojo’s three-stack program, which covered MERN, Java Spring, and Python (Flask & Django). I later decided to pursue my bachelor’s degree at California State University, Northridge, where my understanding of core programming concepts and software engineering principles was further solidified. Today, I primarily work with React and modern frontend technologies such as the Next.js framework, which I use to design and develop client websites as a freelance developer.
+          
         </motion.p>
       </div>
     
