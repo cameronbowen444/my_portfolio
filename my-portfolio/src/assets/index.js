@@ -33,6 +33,21 @@ import frank from './frank.png';
 import photographer from './photographer.png'
 import construction from './construction.png';
 import realestate from './realestate.png';
+import diamond1 from './diamond1.jpg'
+import diamond2 from './diamond2.jpg'
+import puzzle from './puzzle.jpg'
+import purple from './purple.jpg'
+import mikeweb from './mikeweb.jpg'
+import songs from './songs.jpg'
+import shows from './shows.jpg'
+import books from './books.jpg'
+import books2 from './books2.jpg'
+import cook from './cook.jpg'
+import members from './members.jpg'
+import pets from './pets.jpg'
+import pizza from './pizza.jpg'
+
+
 
 export {
   logo,
@@ -68,5 +83,18 @@ export {
   frank,
   photographer,
   construction,
-  realestate
+  realestate,
+  diamond1,
+  diamond2,
+  puzzle,
+  purple,
+  mikeweb,
+  songs,
+  shows,
+  books,
+  books2, 
+  cook,
+  members,
+  pets,
+  pizza,
 };
