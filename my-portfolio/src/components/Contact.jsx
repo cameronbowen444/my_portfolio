@@ -9,22 +9,53 @@ import { contact } from "../assets";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
 
   const {
     register,
-    trigger,
+    handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (e) => {
-    const isValid = await trigger();
-
-    if (!isValid) {
-      e.preventDefault();
-      return;
-    }
-
+  const onSubmit = async (data) => {
     setLoading(true);
+    setStatus("");
+
+    const formData = new FormData();
+
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("message", data.message);
+
+    formData.append("_subject", "New portfolio contact message");
+    formData.append("_captcha", "false");
+    formData.append("_template", "table");
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/cameronbowen555@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Message failed to send");
+      }
+
+      setStatus("Message sent successfully!");
+      reset();
+    } catch (error) {
+      console.error(error);
+      setStatus("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -33,7 +64,6 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="relative mx-auto w-[100%] overflow-hidden rounded-2xl border border-white/10 bg-[#080d1f] p-8 shadow-[0_25px_90px_rgba(0,0,0,0.4)]"
       >
-        {/* background glows */}
         <div className="pointer-events-none absolute right-[-140px] top-[-140px] h-[300px] w-[300px] rounded-full bg-[#1a2f5d]/70 blur-[100px]" />
         <div className="pointer-events-none absolute bottom-[-160px] left-[-130px] h-[280px] w-[280px] rounded-full bg-[#67e8f9]/10 blur-[100px]" />
 
@@ -42,20 +72,9 @@ const Contact = () => {
           <h3 className={styles.sectionHeadText}>Contact.</h3>
 
           <form
-            onSubmit={onSubmit}
-            action="https://formsubmit.co/1e71deedbcbb120dc908c8f9eeef861b"
-            method="POST"
+            onSubmit={handleSubmit(onSubmit)}
             className="mt-12 flex flex-col gap-8"
           >
-            {/* FormSubmit settings */}
-            <input
-              type="hidden"
-              name="_subject"
-              value="New portfolio contact message"
-            />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
-
             {/* NAME */}
             <label className="flex flex-col">
               <span className="mb-4 font-medium text-white">Your Name:</span>
@@ -134,6 +153,18 @@ const Contact = () => {
                   "This field is required."}
                 {errors.message.type === "maxLength" &&
                   "Max length is 2000 characters."}
+              </p>
+            )}
+
+            {status && (
+              <p
+                className={`text-sm ${
+                  status.includes("successfully")
+                    ? "text-green-400"
+                    : "text-red-400"
+                }`}
+              >
+                {status}
               </p>
             )}
 

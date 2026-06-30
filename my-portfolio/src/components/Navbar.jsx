@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo, logo2, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -29,7 +29,7 @@ const Navbar = () => {
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-cyan-400/20 blur-md opacity-0 transition duration-300 group-hover:opacity-100" />
               <img
-                src={logo}
+                src={logo2}
                 alt="logo"
                 className="relative h-9 w-9 object-contain"
               />

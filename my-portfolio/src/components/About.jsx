@@ -106,7 +106,7 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>About Me</h2>
       </motion.div>
 
-      <div className="mt-10 flex flex-col items-center justify-around gap-10 md:flex-row">
+      <div  className="mt-10 flex flex-col items-center justify-around gap-10 md:flex-row">
         <motion.div
           variants={fadeIn("right", "spring", 0.1, 1)}
           className="flex justify-center"

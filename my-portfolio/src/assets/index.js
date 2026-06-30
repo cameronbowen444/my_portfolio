@@ -46,6 +46,8 @@ import cook from './cook.jpg'
 import members from './members.jpg'
 import pets from './pets.jpg'
 import pizza from './pizza.jpg'
+import cb from './cb.png';
+import logo2 from './logo2.png';
 
 
 
@@ -97,4 +99,6 @@ export {
   members,
   pets,
   pizza,
+  cb,
+  logo2
 };
