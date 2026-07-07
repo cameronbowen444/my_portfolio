@@ -28,7 +28,7 @@ const ExperienceCard = ({ experience }) => {
         borderRight: "7px solid rgba(107, 173, 248, 0.45)",
       }}
       date={experience.date}
-      dateClassName="text-secondary"
+      dateClassName="text-secondary ml-5"
       iconStyle={{
         background: experience.iconBg || "#1a2f5d",
         boxShadow:

@@ -22,8 +22,8 @@ import typescript from './tech/typescript.png'
 import mysql from './tech/mysql.png'
 import python from './tech/python.png'
 
-import nicolle from "./nicolle.png";
-import kim from "./kim.png";
+import nicolle from "./nicolle.jpg";
+import kim from "./kim.jpg";
 import nextstore from './nextstore.png'
 import food from "./food-app.png";
 import project from "./portfolio.png";
